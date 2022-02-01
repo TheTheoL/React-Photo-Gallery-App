@@ -21,6 +21,12 @@ constructor() {
   };
 } 
 
+updateQuery = (query) => {
+  this.setState({
+    query 
+  })
+}
+
 
 componentDidMount() {
   this.performSearch();

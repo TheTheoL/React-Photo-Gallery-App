@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 
 class Nav extends Component {
-    render () {
-        return (
+
+   render () {
+      return (
            <nav className="main-nav">
              <ul>
                 <li><NavLink to="/search/cats">Cats</NavLink></li>
