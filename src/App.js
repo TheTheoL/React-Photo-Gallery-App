@@ -61,6 +61,7 @@ render() {
             <Route path="/cats" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             <Route path="/dogs" render={() => <Photo query="dogs" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             <Route path="/birds" render={() => <Photo query="birds" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
+            <Route path="/" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
         </Switch>
         
 
