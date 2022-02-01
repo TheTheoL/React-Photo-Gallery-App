@@ -48,7 +48,7 @@ render() {
       <BrowserRouter>
         <div className="container">
           <h1>Photo Gallery Using React.js and Flickr</h1>
-        <SearchBar />
+        <SearchBar onSearch={this.performSearch}/>
         <Nav />
         <Switch>
             <Route path="/cats" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
