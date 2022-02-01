@@ -12,7 +12,7 @@ export default class SearchBar extends Component {
 
     handleSubmit = e => {
          e.preventDefault();
-         this.props.onSearch(this.query.value);
+         this.props.onSearch(this.state.searchText);
          e.currentTarget.reset();
     }
 
