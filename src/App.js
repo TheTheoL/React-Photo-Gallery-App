@@ -30,9 +30,12 @@ performSearch = (query = 'sunsets') => {
   .then(response => {
       this.setState({
         photos: response.data.photos.photo,
-        loading: false
+        
       });
   })
+  .catch(error => {
+    console.log('Error fetching and parsing data', error);
+  });
 
 }
 
@@ -44,10 +47,9 @@ render() {
   return (
       <BrowserRouter>
         <div className="container">
-          
+          <h1>Photo Gallery Using React.js and Flickr</h1>
         <SearchBar />
         <Nav />
-        <h1>Photo Gallery Using React.js and Flickr</h1>
         <Switch>
             <Route path="/cats" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             <Route path="/dogs" render={() => <Photo query="dogs" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
