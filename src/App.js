@@ -8,6 +8,7 @@ import apiKey from './config.js';
 import SearchBar from './Components/SearchBar';
 import Nav from './Components/Nav';
 import Photo from './Components/Photo';
+import NotFound from './Components/NotFound';
 
 export default class App extends Component {
 
@@ -68,6 +69,7 @@ render() {
             <Route path="/dogs" render={() => <Photo query="dogs" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             <Route path="/birds" render={() => <Photo query="birds" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             <Route path="/" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
+            <Route component={NotFound}/>
         </Switch>
         
 

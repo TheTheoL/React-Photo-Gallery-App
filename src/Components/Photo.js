@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 
+
+
+//this displays the li and img elements on the page.
+
 export default class Photo extends Component {
   render () {
     const { photos, isLoading } = this.props;
