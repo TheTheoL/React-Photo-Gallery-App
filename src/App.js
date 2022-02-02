@@ -17,6 +17,9 @@ constructor() {
   super();
   this.state = {
     photos: [],
+    cats: [],
+    dogs: [],
+    birds: [],
     loading: true,
     query: ''
   };
@@ -33,7 +36,7 @@ componentDidMount() {
   this.performSearch();
 }
 
-performSearch = (query) => {
+performSearch = (query = 'sunset') => {
   this.setState({
     isLoading: true,
     query
@@ -65,10 +68,14 @@ render() {
         <SearchBar onSearch={this.performSearch}/>
         <Nav />
         <Switch>
-            <Route path="/cats" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
-            <Route path="/dogs" render={() => <Photo query="dogs" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
-            <Route path="/birds" render={() => <Photo query="birds" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
+            <Route path="/cats" render={() => <Photo photos={this.state.cats} isLoading={this.state.isLoading} />} />
+            
+            <Route path="/dogs" render={() => <Photo photos={this.state.dogs} isLoading={this.state.isLoading} />} />
+            
+            <Route path="/birds" render={() => <Photo photos={this.state.birds} isLoading={this.state.isLoading} />} />
+            
             <Route path="/" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
+            
             <Route component={NotFound}/>
         </Switch>
         
