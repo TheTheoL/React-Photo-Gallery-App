@@ -51,11 +51,18 @@ performSearch = (query ) => {
         photos: response.data.photos.photo,
         isLoading: false
       })
-    }
+    } if (query === 'cats') {
+      this.setState({ cats: response.data.photos.photo })
+    } if (query === 'dogs') {
+      this.setState({ dogs: response.data.photos.photo })
+    } if (query === 'birds') {
+      this.setState({ birds: response.data.photos.photo })
+    } 
 })
   .catch(error => {
     console.log('Error fetching and parsing data', error);
   });
+
 }
 
 render() { 
