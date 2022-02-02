@@ -34,9 +34,12 @@ updateQuery = (query) => {
 
 componentDidMount() {
   this.performSearch();
+  this.performSearch('cats');
+  this.performSearch('dogs');
+  this.performSearch('birds');
 }
 
-performSearch = (query = 'sunset') => {
+performSearch = (query ) => {
   this.setState({
     isLoading: true,
     query
@@ -53,6 +56,8 @@ performSearch = (query = 'sunset') => {
   .catch(error => {
     console.log('Error fetching and parsing data', error);
   });
+
+  
 
 }
 
