@@ -39,6 +39,8 @@ componentDidMount() {
   this.performSearch('birds');
 }
 
+//this performs the search as well as makes the nav links work.
+
 performSearch = (query ) => {
   this.setState({
     isLoading: true,
