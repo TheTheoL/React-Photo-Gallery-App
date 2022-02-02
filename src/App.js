@@ -56,13 +56,7 @@ performSearch = (query ) => {
   .catch(error => {
     console.log('Error fetching and parsing data', error);
   });
-
-  
-
 }
-
-
-  
 
 render() { 
     
