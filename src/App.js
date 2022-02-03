@@ -82,7 +82,7 @@ render() {
             
             <Route path="/birds" render={() => <Photo photos={this.state.birds} isLoading={this.state.isLoading} />} />
             
-            <Route path="/" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
+            <Route exact path="/" render={() => <Photo query="cats" performSearch={this.performSearch} photos={this.state.photos} isLoading={this.state.isLoading} /> } />
             
             <Route component={NotFound}/>
         </Switch>
