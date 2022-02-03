@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 
 export default class Photo extends Component {
   render () {
-    const { photos, isLoading } = this.props;
+    const { photos } = this.props;
       return (
           <div className="photo-container">
           <h2>Results</h2>
@@ -14,7 +14,7 @@ export default class Photo extends Component {
             {
               photos.map(photo => (
                 <li key={photo.id}>
-                  <img src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} />
+                  <img src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} alt={`${photo.title}`} />
                 </li>
               )
             )}
