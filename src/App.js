@@ -31,7 +31,7 @@ updateQuery = (query) => {
   })
 }
 
-
+//this inserts into the DOM tree the needed search components
 componentDidMount() {
   this.performSearch();
   this.performSearch('cats');
