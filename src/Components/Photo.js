@@ -13,7 +13,7 @@ export default class Photo extends Component {
           <ul>
             {
               photos.map(photo => (
-                <li>
+                <li key={photo.id}>
                   <img src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} />
                 </li>
               )
